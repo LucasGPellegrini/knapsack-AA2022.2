@@ -4,7 +4,7 @@ Implementação de algumas versões do "knapsack problem" (problema da mochila) 
 # Inicialmente:
 ✅ Implementar a mochila exponencial
 
-⬜ Implementar a mochila “memoizada”
+✅ Implementar a mochila “memoizada”
 
 ⬜ Implementar a mochila PD
 
