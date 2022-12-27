@@ -10,4 +10,4 @@ Implementação de algumas versões do "knapsack problem" (problema da mochila) 
 
 ⬜ Implementar a mochila ??????
 
-📊Análises comparativas e conclusões
+📊 Análises comparativas e conclusões
