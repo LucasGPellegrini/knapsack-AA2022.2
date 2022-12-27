@@ -6,7 +6,7 @@ Implementação de algumas versões do "knapsack problem" (problema da mochila) 
 
 ✅ Implementar a mochila “memoizada”
 
-⬜ Implementar a mochila PD
+✅ Implementar a mochila PD
 
 ⬜ Implementar a mochila ??????
 
