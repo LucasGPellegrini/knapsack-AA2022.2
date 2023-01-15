@@ -4,10 +4,13 @@ Implementação de algumas versões do "knapsack problem" (problema da mochila) 
 # Inicialmente:
 ✅ Implementar a mochila exponencial
 
-✅ Implementar a mochila “memoizada”
+✅ Implementar a mochila “memoizada”  
+___Parcialmente Completo___.
 
 ✅ Implementar a mochila PD
 
-⬜ Implementar a mochila ??????
+✅ Implementar a mochilaIK (aproximação)  
+___Parcialmente Completo___.
 
-📊 Análises comparativas e conclusões
+📊 Análises comparativas e conclusões  
+___A fazer___.
