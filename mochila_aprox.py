@@ -1,15 +1,8 @@
+import tracemalloc
 import numpy as np
 
 PESO = 1
 VALOR = 0
-
-
-def main():
-    lista_coisas = [(10, 5), (40, 4), (30, 6), (50, 3)]
-    mochila = MochilaA()
-
-    mochila.resolve(10, lista_coisas)
-    print(f'Resposta mochila_aproximada: {mochila.resposta}')
 
 
 class MochilaA:
@@ -44,20 +37,11 @@ class MochilaA:
         coisas[:] = [x for x in coisas if x[PESO] < k]
 
         # IBARRA-KIM
-        sigma   = max(coisas, key=lambda x: x[VALOR])[VALOR]
+        sigma = max(coisas, key=lambda x: x[VALOR])[VALOR]
         epsilon = np.random.ranf()
         print(f"\u03B5 = {epsilon}")
-        # Lambda é DIVIDIDO pelo subconjunto n ?????
-        # pelo tamanho de n?
-        # ENTÃO ISSO TEM QUE SER FEITO A CADA ITERAÇÃO ?????
         lmbd = (epsilon * sigma) / len(coisas)
 
         u = []
         for valor, _ in coisas:
             u.append(valor/lmbd)
-
-
-
-
-if __name__ == "__main__":
-    main()

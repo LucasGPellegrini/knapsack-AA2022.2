@@ -4,14 +4,6 @@ PESO = 1
 VALOR = 0
 
 
-def main():
-    lista_coisas = [(10, 5), (40, 4), (30, 6), (50, 3)]
-    mochila = MochilaPD()
-
-    mochila.resolve(10, lista_coisas)
-    print(f'Resposta mochila_prog_dinam: {mochila.resposta}')
-
-
 class MochilaPD:
     def __init__(self):
         self.matriz = [[]]
@@ -36,7 +28,3 @@ class MochilaPD:
             for elem in linha:
                 if elem > self.resposta:
                     self.resposta = elem
-
-
-if __name__ == "__main__":
-    main()

@@ -1,14 +1,5 @@
-import numpy as np
-
 PESO = 1
 VALOR = 0
-
-
-def main():
-    lista_coisas = [(10, 5), (40, 4), (30, 6), (50, 3)]
-    mochila = MochilaMemo()
-
-    print(f'Resposta mochila_memoizada : {mochila.resolve(10, lista_coisas, len(lista_coisas)-1)}')
 
 
 class MochilaMemo:
@@ -21,17 +12,9 @@ class MochilaMemo:
 
         if n == 0:
             if coisas[n][PESO] <= k:
-                if chave_atual == []:
-                    valor = 0
-                else:
-                    if str(chave_atual) in self.dic:
-                        valor = self.dic[str(chave_atual)]
-                    else:
+                if chave_atual != []:
+                    if str(chave_atual) not in self.dic:
                         self.dic[str(chave_atual)] = n
-                        valor = n
-                chave_atual.append(n)
-                chave_atual.sort()
-                self.dic[str(chave_atual)] = valor + coisas[n][VALOR]
                 return coisas[n][VALOR]
             return 0
 
@@ -55,7 +38,3 @@ class MochilaMemo:
             valorSem = self.dic[str(chave_atual)]
 
         return max(valorCom, valorSem)
-
-
-if __name__ == "__main__":
-    main()
