@@ -5,12 +5,14 @@ Implementação de algumas versões do "knapsack problem" (problema da mochila) 
 ✅ Implementar a mochila exponencial
 
 ✅ Implementar a mochila “memoizada”  
-___Parcialmente Completo___.
 
 ✅ Implementar a mochila PD
 
-✅ Implementar a mochilaIK (aproximação)  
-___Parcialmente Completo___.
+✅ Implementar a mochilaIK (aproximação) 
+
+⬜ Rodar os testes na main, representação/análise grafica.
+___A fazer___.
+___R? MatPlotly? Seaborn?___.
 
 📊 Análises comparativas e conclusões  
 ___A fazer___.
