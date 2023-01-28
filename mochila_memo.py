@@ -6,35 +6,25 @@ class MochilaMemo:
     def __init__(self):
         self.dic = {}
 
-    def resolve(self, k, coisas, n, chave_atual=None):
-        if chave_atual is None:
-            chave_atual = []
-
+    def resolve(self, k, coisas, n):
         if n == 0:
             if coisas[n][PESO] <= k:
-                if chave_atual != []:
-                    if str(chave_atual) not in self.dic:
-                        self.dic[str(chave_atual)] = n
                 return coisas[n][VALOR]
             return 0
 
-        valorCom = -1
-        # Calcula o possível valor com
+        if (n, k) in self.dic:
+            return self.dic[(n, k)]
+
+        # Calcula o possível valor sem o elemento
+        valorSem = self.resolve(k, coisas, n - 1)
+
+        # Calcula o possível valor com o elemento
         if k >= coisas[n][PESO]:
-            chave = chave_atual.copy()
-            chave.append(n)
-            chave.sort()
-            if str(chave) in self.dic:
-                valorCom = self.dic[str(chave)]
-            else:
-                self.dic[str(chave)] = self.resolve(k - coisas[n][PESO], coisas, n - 1, chave) + coisas[n][VALOR]
-                valorCom = self.dic[str(chave)]
-
-        # Calcula o valor sem
-        if str(chave_atual) in self.dic:
-            valorSem = self.dic[str(chave_atual)]
+            valorCom = self.resolve(k - coisas[n][PESO], coisas, n - 1) + coisas[n][VALOR]
+            self.dic[(n, k)] = max(valorCom, valorSem)
+        # Se não cabe, é sem mesmo
         else:
-            self.dic[str(chave_atual)] = self.resolve(k, coisas, n - 1, chave_atual)
-            valorSem = self.dic[str(chave_atual)]
+            self.dic[(n, k)] = valorSem
 
-        return max(valorCom, valorSem)
+        return self.dic[(n, k)]
+    
