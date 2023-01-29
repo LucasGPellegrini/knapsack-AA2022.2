@@ -10,10 +10,7 @@ Implementação de algumas versões do "knapsack problem" (problema da mochila) 
 
 ✅ Implementar a mochilaIK (aproximação) 
 
-⬜ Rodar os testes na main, representação/análise grafic
-
-___A fazer.___
-___(R? MatPlotly? Seaborn?)___.
+⬜ Rodar os testes no jupyter, representação/análise grafica com markdown e MatPlotlib. (ongoing)
 
 📊 Análises comparativas e conclusões  
 ___A fazer___.
