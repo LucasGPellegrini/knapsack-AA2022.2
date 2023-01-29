@@ -7,7 +7,7 @@ class MochilaA:
         self.matriz = [[]]
         self.resposta = -1
 
-    def resolve(self, k, coisas, epsilon = 0.15):
+    def resolve(self, k, coisas, epsilon = 0.2):
         coisas = self.pre_processamento_IK(k, coisas, epsilon)
 
         self.matriz = np.zeros((len(coisas), k+1))
